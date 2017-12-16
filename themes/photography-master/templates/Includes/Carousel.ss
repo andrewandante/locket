@@ -3,44 +3,21 @@
 
     <!-- Indicators -->
     <ol class="carousel-indicators xtra-border">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <% loop $CarouselImages %>
+        <li data-target="#myCarousel" data-slide-to="$Position" <% if $First %>class="active"<% end_if %>></li>
+        <% end_loop %>
     </ol>
 
     <!-- Wrapper for Slides -->
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="themes/photography-master/img/bg.jpg" alt="First slide">
+        <% loop $CarouselImages %>
+        <div class="item <% if $First %>active<% end_if %>">
+            <img src="$Link" alt="$Position slide">
             <div class="carousel-caption">
-                <h2 class="sub-title-home">We Don't Take Photograph</h2>
-                <h1 class="title-home">We Make It</h1>
+                <h3 class="title-home">$Title</h3>
+                <h4 class="date-home">$Created.Nice</h4>
             </div>
         </div>
-        <div class="item">
-            <!-- Set the second background image using inline CSS below. -->
-            <!-- <div class="fill" style="background-image:url('img/bg1.jpg');"></div> -->
-            <img src="themes/photography-master/img/bg1.jpg" alt="Second slide">
-            <div class="carousel-caption">
-                <h2 class="sub-title-home">We Don't Take Photograph</h2>
-                <h1 class="title-home">We Make It</h1>
-            </div>
-        </div>
-        <div class="item">
-            <!-- Set the third background image using inline CSS below. -->
-            <!-- <div class="fill" style="background-image:url('img/bg3.jpg');"></div> -->
-            <img src="themes/photography-master/img/bg3.jpg" alt="Third slide">
-            <div class="carousel-caption">
-                <h2 class="sub-title-home">We Don't Take Photograph</h2>
-                <h1 class="title-home">We Make It</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="container page-container">
-        <div class="home-page-header">
-
-        </div>
-
+        <% end_loop %>
     </div>
 </div>

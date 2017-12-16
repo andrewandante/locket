@@ -5,3 +5,4 @@ SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
 LeKoala\DebugBar\DebugBar:
   check_local_ip: false
+  enabled_in_admin: false

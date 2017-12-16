@@ -2,6 +2,7 @@
 
 namespace AndrewAndante\Locket\Controllers;
 
+use SilverStripe\Assets\Image;
 use SilverStripe\Control\Controller;
 use SilverStripe\View\Requirements;
 
@@ -38,5 +39,10 @@ class HomeController extends Controller
         Requirements::css('http://fonts.googleapis.com/css?family=Berkshire+Swash');
         Requirements::css('themes/photography-master/css/bootstrap.min.css');
         Requirements::css('themes/photography-master/css/navmenu-reveal.css');
+    }
+
+    public function getCarouselImages()
+    {
+        return Image::get()->sort('Created', 'DESC')->limit('3');
     }
 }
