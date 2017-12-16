@@ -22,8 +22,6 @@ class HomeController extends Controller
         parent::init();
 
         Requirements::javascript('themes/photography-master/js/main.js');
-        Requirements::javascript('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js');
-        Requirements::javascript('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js');
         Requirements::javascript('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
         Requirements::javascript('themes/photography-master/dist/js/jasny-bootstrap.min.js');
         Requirements::javascript('themes/photography-master/js/bootstrap.min.js');

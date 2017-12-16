@@ -17,12 +17,12 @@ function check_button(){
 		$("#gallery-header-center-left-title").html('All Galleries');
 		}
 	if(button==2){
-		$("#filter-studio").addClass(button_class);
-		$("#gallery-header-center-left-title").html('Studio Gallery');
+		$("#filter-2017").addClass(button_class);
+		$("#gallery-header-center-left-title").html('2017 Gallery');
 		}
 	if(button==3){
-		$("#filter-landscape").addClass(button_class);
-		$("#gallery-header-center-left-title").html('Landscape Gallery');
+		$("#filter-2018").addClass(button_class);
+		$("#gallery-header-center-left-title").html('2018 Gallery');
 		}	
 }
 	
@@ -42,8 +42,8 @@ function check_size(){
 
 	
 $("#filter-all").click(function() { $container.isotope({ filter: '.all' }); button = 1; check_button(); });
-$("#filter-studio").click(function() {  $container.isotope({ filter: '.studio' }); button = 2; check_button();  });
-$("#filter-landscape").click(function() {  $container.isotope({ filter: '.landscape' }); button = 3; check_button();  });
+$("#filter-2017").click(function() {  $container.isotope({ filter: '.2017' }); button = 2; check_button();  });
+$("#filter-2018").click(function() {  $container.isotope({ filter: '.2018' }); button = 3; check_button();  });
 $("#gallery-header-center-left-icon").click(function() { if(size==0){size=1;}else if(size==1){size=0;} check_size(); });
 
 

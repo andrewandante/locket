@@ -36,6 +36,10 @@ body{
    color: rgb(136, 136, 136);
 }
 
+.canvas.gallery {
+    background-color: black;
+}
+
 a.navmenu-brand {
   margin: 51px 0 80px;
 }
@@ -127,7 +131,7 @@ li.category-item a:hover {
 /* ---- grid ---- */
 
 .grid {
-  /* background: #DDD; */
+  background: rgba(48, 51, 48, 0.97);
   max-width: 1200px;
 }
 /* clear fix */
@@ -185,6 +189,10 @@ p.blog-post-sub-title.text-center {
 }
 h3.blog-post-title {
   margin-top: 0px;
+}
+
+h1.blog-post-title {
+    margin-top: 45px;
 }
 
 
@@ -326,7 +334,7 @@ textarea#message {
   /* margin-bottom: 28px; */
 }
 }
-@media (max-width: 1090){
+@media (max-width: 1090px){
   div.canvas {
     margin-top: -50px !important;
     height: 110% !important;
@@ -460,4 +468,9 @@ h3.blog-post-title {
       float: right;
       margin:10px 40px 20px;
   }
+}
+@media (min-width:991px){
+    #container {
+        width: 50%;
+    }
 }

@@ -1,9 +1,9 @@
 <div class="navmenu navmenu-default navmenu-fixed-left">
 
     <ul class="nav navmenu-nav">
-        <li><a href="$AbsoluteBaseUrl">Home</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="https://atawalkingspeed.com">Blog</a></li>
+        <li><a href=$BaseURL>Home</a></li>
+        <li><a href="{$BaseURL}gallery" >Gallery</a></li>
+        <li><a href="https://atawalkingspeed.com">Blog  <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
     </ul>
     <div class="navmenu-brand">
         <h1>$SiteConfig.Title</h1>
