@@ -1,0 +1,22 @@
+{
+    "name": "silverstripe/recipe-core",
+    "type": "silverstripe-recipe",
+    "description": "SilverStripe framework-only core recipe",
+    "homepage": "http://silverstripe.org",
+    "license": "BSD-3-Clause",
+    "require": {
+        "silverstripe/recipe-plugin": "^1",
+        "silverstripe/assets": "1.0.1@stable",
+        "silverstripe/config": "1.0.1@stable",
+        "silverstripe/framework": "4.0.1@stable",
+        "silverstripe/admin": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "^5.7"
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
