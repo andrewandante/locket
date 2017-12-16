@@ -1,0 +1,7 @@
+---
+Name: locketthemes
+---
+SilverStripe\View\SSViewer:
+  themes:
+    - photography-master
+    - '$default'

@@ -1,0 +1,9 @@
+---
+Name: locketroutes
+After: framework/routes#coreroutes
+---
+SilverStripe\Control\Director:
+  rules:
+#    'teams//$Action/$ID/$Name': 'TeamController'
+#    'player/': 'PlayerController'
+    '': 'AndrewAndante\Locket\Controllers\HomeController'

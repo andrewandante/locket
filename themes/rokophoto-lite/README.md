@@ -1,1 +1,0 @@
-# RokoPhoto-Lite
