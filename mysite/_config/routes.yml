@@ -1,8 +1,10 @@
 ---
 Name: locketroutes
-After: framework/routes#coreroutes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
 ---
 SilverStripe\Control\Director:
   rules:
     'gallery/$ID': 'AndrewAndante\Locket\Controllers\GalleryController'
-    '$Action/$ID': 'AndrewAndante\Locket\Controllers\HomeController'
+    '': 'AndrewAndante\Locket\Controllers\HomeController'
