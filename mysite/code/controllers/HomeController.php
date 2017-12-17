@@ -37,6 +37,8 @@ class HomeController extends Controller
         Requirements::css('http://fonts.googleapis.com/css?family=Berkshire+Swash');
         Requirements::css('themes/photography-master/css/bootstrap.min.css');
         Requirements::css('themes/photography-master/css/navmenu-reveal.css');
+        Requirements::css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
     }
 
     public function getCarouselImages()
