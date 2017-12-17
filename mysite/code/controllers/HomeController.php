@@ -32,8 +32,8 @@ class HomeController extends ProtectedPageController
 
         Requirements::css('themes/photography-master/css/style.css');
         Requirements::css('themes/photography-master/dist/css/jasny-bootstrap.min.css');
-        Requirements::css('http://fonts.googleapis.com/css?family=Raleway');
-        Requirements::css('http://fonts.googleapis.com/css?family=Berkshire+Swash');
+        Requirements::css('//fonts.googleapis.com/css?family=Raleway');
+        Requirements::css('//fonts.googleapis.com/css?family=Berkshire+Swash');
         Requirements::css('themes/photography-master/css/bootstrap.min.css');
         Requirements::css('themes/photography-master/css/navmenu-reveal.css');
         Requirements::css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');

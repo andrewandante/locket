@@ -12,7 +12,10 @@ class ProtectedPageController extends Controller
         parent::init();
 
         if (!Security::getCurrentUser()) {
-            Security::permissionFailure();
+            Security::permissionFailure(
+                null,
+                "You must be logged in to view this site. If you require access, please contact Andrew or Leah. If you don't know how, then you probably shouldn't have access."
+            );
         }
     }
 }

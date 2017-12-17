@@ -1,0 +1,55 @@
+.ArrayData {
+    background: rgb(15, 14, 14);
+    color: rgb(136, 136, 136);
+}
+
+label.left {
+    font-size: 35px;
+}
+
+input.text {
+    font-size: 35px;
+}
+
+input.checkbox {
+    margin-top: 15px;
+}
+
+input.action {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+input.action:hover {
+    cursor: pointer;
+    background-color: rgb(136, 136, 136);
+    border-color: rgb(136, 136, 136);
+}
+
+p.message {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#MemberLoginForm_LoginForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#ForgotPassword > a {
+    color: #0ea0eb;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+#ForgotPassword > a:hover {
+    color: #1fe2eb;
+}
