@@ -4,19 +4,17 @@ namespace AndrewAndante\Locket\Controllers;
 
 use DateTime;
 use SilverStripe\Assets\Image;
-use SilverStripe\Control\Controller;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\Requirements;
 
-class GalleryController extends Controller
+class GalleryController extends ProtectedPageController
 {
     protected function init()
     {
         parent::init();
 
         Requirements::javascript('themes/photography-master/js/modernizr.min.js');
-
         Requirements::javascript('themes/photography-master/js/main.js');
         Requirements::javascript('themes/photography-master/js/jquery.js');
         Requirements::javascript('themes/photography-master/js/jquery-ui-1.10.4.min.js');

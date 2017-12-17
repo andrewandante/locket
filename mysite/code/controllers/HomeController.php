@@ -3,10 +3,9 @@
 namespace AndrewAndante\Locket\Controllers;
 
 use SilverStripe\Assets\Image;
-use SilverStripe\Control\Controller;
 use SilverStripe\View\Requirements;
 
-class HomeController extends Controller
+class HomeController extends ProtectedPageController
 {
     private static $allowed_actions = [
         'index'
