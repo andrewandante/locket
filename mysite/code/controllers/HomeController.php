@@ -44,4 +44,10 @@ class HomeController extends ProtectedPageController
     {
         return Image::get()->sort('Created', 'DESC')->limit('3');
     }
+
+    public function getIsMobile()
+    {
+        $detector = new \Mobile_Detect();
+        return $detector->isMobile();
+    }
 }

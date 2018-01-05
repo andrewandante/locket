@@ -64,6 +64,10 @@ a.navmenu-brand {
   position: absolute;
   z-index: 99;
 }
+.navmenu.navmenu-default.navmenu-fixed-top {
+  z-index: 99;
+  width: 100%;
+}
 .navbar.navbar-default button {
   position: absolute !important;
   top: 50%;
@@ -302,8 +306,10 @@ textarea#message {
 
 .carousel-indicators .active {
   width: 20px;
-  height: 5px;
+  height: 12px !important;
   margin: 1px;
+  background-color: white;
+  color: white;
 }
 
 .carousel-inner>.item>img {

@@ -1,5 +1,8 @@
+<% if $IsMobile %>
+<div class="navmenu navmenu-default navmenu-fixed-top">
+<% else %>
 <div class="navmenu navmenu-default navmenu-fixed-left">
-
+<% end_if %>
     <ul class="nav navmenu-nav">
         <li><a href=$BaseURL>Home</a></li>
         <li><a href="{$BaseURL}gallery" >Gallery</a></li>
