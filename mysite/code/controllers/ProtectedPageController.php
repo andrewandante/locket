@@ -18,4 +18,10 @@ class ProtectedPageController extends Controller
             );
         }
     }
+
+    public function getIsMobile()
+    {
+        $detector = new \Mobile_Detect();
+        return $detector->isMobile();
+    }
 }
