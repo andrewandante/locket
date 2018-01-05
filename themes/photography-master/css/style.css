@@ -12,6 +12,7 @@
 
 body{
   font-family: 'Raleway', sans-serif;
+  background-color: rgb(15, 14, 14) !important;
 }
 .bar {
   background-color: black;
@@ -336,13 +337,17 @@ textarea#message {
 }
 @media (max-width: 1090px){
   div.canvas {
-    margin-top: -50px !important;
+    margin-top: 90px !important;
     height: 110% !important;
+    background-color: rgb(15, 14, 14);
   }
   .carousel, .item, .active {
   height: 110% !important;
   margin-top: -50px !important;
-}
+  }
+  .carousel-indicators {
+      bottom: 350px !important;
+  }
 }
 
 @media (min-width: 100px){
@@ -416,8 +421,6 @@ h3.blog-post-title {
 }
 
 }
-
-
 
 @media (min-width:991px){
 .col-md-4.col-sm-12.contact-bar {
