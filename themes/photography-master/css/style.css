@@ -409,7 +409,7 @@ textarea#message {
 
 }
 @media (max-width:400px){
-    .gallery-header-center-right-links {
+  .gallery-header-center-right-links {
       padding-right: 1px !important;
       padding-left: 1px !important;
   }
@@ -417,12 +417,12 @@ textarea#message {
     width: 100% !important;
     margin-bottom: 10px;
     margin-left: -14px !important;
-}
-h3.blog-post-title {
+  }
+  h3.blog-post-title {
     margin-top: 0px;
     text-align: center;
-}
-.photostack figure {
+  }
+  .photostack figure {
     width: 100%;
      height: auto; 
     position: relative;
@@ -431,8 +431,10 @@ h3.blog-post-title {
     padding: 26px !important;
     text-align: center;
     margin: 5px;
-}
-
+  }
+  div.canvas.gallery {
+      padding: 50px 0 0 25px;
+  }
 }
 
 @media (min-width:991px){
