@@ -354,6 +354,13 @@ textarea#message {
   .carousel-indicators {
       bottom: 350px !important;
   }
+  div.canvas.gallery {
+      padding: 50px 0 0 250px;
+  }
+
+  #gallery-header-center-right {
+      padding-right: 85px;
+  }
 }
 
 @media (min-width: 100px){
