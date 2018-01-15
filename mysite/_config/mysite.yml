@@ -6,3 +6,5 @@ SilverStripe\Core\Manifest\ModuleManifest:
 LeKoala\DebugBar\DebugBar:
   check_local_ip: false
   enabled_in_admin: false
+AndrewAndante\Locket\Model\Invite:
+  days_to_expiry: 7

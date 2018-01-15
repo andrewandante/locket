@@ -6,5 +6,6 @@ After:
 ---
 SilverStripe\Control\Director:
   rules:
+    'user//$Action/$ID': 'AndrewAndante\Locket\Controllers\InviteController'
     'gallery/$ID': 'AndrewAndante\Locket\Controllers\GalleryController'
     '': 'AndrewAndante\Locket\Controllers\HomeController'
