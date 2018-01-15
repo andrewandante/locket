@@ -20,6 +20,7 @@ use SilverStripe\ORM\ValidationException;
 use SilverStripe\Security\Member;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\Security;
+use SilverStripe\View\Requirements;
 
 class InviteController extends Controller
 {
@@ -40,6 +41,7 @@ class InviteController extends Controller
 
     public function index()
     {
+        Requirements::css('themes/photography-master/css/style.css');
         if (!Security::getCurrentUser()) {
             return $this->redirect('/Security/login');
         } elseif (!Permission::check('ADMIN')) {

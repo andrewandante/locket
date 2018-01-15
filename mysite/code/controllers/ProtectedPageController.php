@@ -3,6 +3,7 @@
 namespace AndrewAndante\Locket\Controllers;
 
 use SilverStripe\Control\Controller;
+use SilverStripe\Security\Permission;
 use SilverStripe\Security\Security;
 
 class ProtectedPageController extends Controller
@@ -23,5 +24,11 @@ class ProtectedPageController extends Controller
     {
         $detector = new \Mobile_Detect();
         return $detector->isMobile();
+    }
+
+    public function getCurrentMemberIsAdmin()
+    {
+        $member = Security::getCurrentUser();
+        return Permission::checkMember($member, 'ADMIN');
     }
 }
