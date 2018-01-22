@@ -25,8 +25,8 @@
             <div id="gallery-content">
                 <div id="gallery-content-center">
                     <% loop $AllImages %>
-                        <a href="{$Link}" data-lightbox="studio1" data-title="$Title: $Created.Format('d/M/Y')">
-                            <img src="{$Link}" class="all {$Created.Year}"/>
+                        <a href="{$Link}" data-lightbox="studio1" data-title="$Title: $DisplayDate.Date">
+                            <img src="{$Link}" class="all {$DisplayDate.Year}"/>
                         </a>
                     <% end_loop %>
                 </div>

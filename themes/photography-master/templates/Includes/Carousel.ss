@@ -15,7 +15,7 @@
             <img src="$Link" alt="$Position slide">
             <div class="carousel-caption">
                 <h3 class="title-home">$Title</h3>
-                <h4 class="date-home">$Created.Nice</h4>
+                <h4 class="date-home">$DisplayDate.Nice</h4>
             </div>
         </div>
         <% end_loop %>

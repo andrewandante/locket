@@ -8,3 +8,9 @@ LeKoala\DebugBar\DebugBar:
   enabled_in_admin: false
 AndrewAndante\Locket\Model\Invite:
   days_to_expiry: 7
+SilverStripe\Assets\Image:
+  extensions:
+    - 'AndrewAndante\Locket\Model\GalleryImageExtension'
+SilverStripe\AssetAdmin\Forms\ImageFormFactory:
+  extensions:
+    - 'AndrewAndante\Locket\Model\GalleryImageFormFactoryExtension'

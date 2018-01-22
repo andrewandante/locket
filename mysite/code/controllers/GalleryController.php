@@ -49,10 +49,9 @@ class GalleryController extends ProtectedPageController
 
     public function getYears()
     {
-        $createdDates = array_unique($this->getAllImages()->column('Created'));
         $years = ArrayList::create();
-        foreach ($createdDates as $date) {
-            $candidateYear = ((new DateTime($date))->format('Y'));
+        foreach ($this->getAllImages() as $image) {
+            $candidateYear = ((new DateTime($image->getDisplayDate()))->format('Y'));
             if (!($years->find('Year', $candidateYear))) {
                 $years->push(ArrayData::create([
                     'Year' => $candidateYear
