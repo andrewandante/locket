@@ -7,9 +7,10 @@
         <li><a href=$BaseURL>Home</a></li>
         <li><a href="{$BaseURL}gallery" >Gallery</a></li>
         <li><a href="https://atawalkingspeed.com">Blog  <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+        <li><br></li>
         <% if $CurrentMemberIsAdmin %>
-        <li><a href="{$BaseURL}user">Invite a User</a></li>
-        <li><a href="{$BaseURL}admin">Admin section</a></li>
+        <li class="admin-link"><a href="{$BaseURL}user">Invite a User</a></li>
+        <li class="admin-link"><a href="{$BaseURL}admin">Admin section</a></li>
         <% end_if %>
     </ul>
     <div class="navmenu-brand">

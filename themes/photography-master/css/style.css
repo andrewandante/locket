@@ -73,6 +73,14 @@ a.navmenu-brand {
   top: 50%;
 }
 
+.navmenu > .nav.navmenu-nav > li.admin-link > a {
+    color: #518abb !important;
+}
+
+.navmenu > .nav.navmenu-nav > li.admin-link > a:hover {
+    color: lightblue !important;
+}
+
 
 
 html{
