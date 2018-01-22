@@ -42,6 +42,7 @@ class InviteController extends Controller
     public function index()
     {
         Requirements::css('themes/photography-master/css/style.css');
+        Requirements::css('mysite/css/member_login.css');
         if (!Security::getCurrentUser()) {
             return $this->redirect('/Security/login');
         } elseif (!Permission::check('ADMIN')) {
