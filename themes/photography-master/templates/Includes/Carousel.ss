@@ -12,7 +12,7 @@
     <div class="carousel-inner" role="listbox">
         <% loop $CarouselImages %>
         <div class="item <% if $First %>active<% end_if %>">
-            <img src="$Link" alt="$Position slide">
+            <img src="$Resampled.URL" alt="$Position slide">
             <div class="carousel-caption">
                 <h3 class="title-home">$Title</h3>
                 <h4 class="date-home">$DisplayDate.Date</h4>

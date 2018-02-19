@@ -25,8 +25,8 @@
             <div id="gallery-content">
                 <div id="gallery-content-center">
                     <% loop $AllImages %>
-                        <a href="{$Link}" data-lightbox="studio1" data-title="$Title: $DisplayDate.Date">
-                            <img src="{$Link}" class="all {$DisplayDate.Year}"/>
+                        <a href="{$Resampled.URL}" data-lightbox="studio1" data-title="$Title: $DisplayDate.Date">
+                            <img src="{$Resampled.URL}" class="all {$DisplayDate.Year}"/>
                         </a>
                     <% end_loop %>
                 </div>
