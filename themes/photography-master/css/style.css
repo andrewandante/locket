@@ -320,9 +320,19 @@ textarea#message {
   color: white;
 }
 
+.carousel-inner>.item {
+  background-color: rgb(15, 14, 14);
+}
+
 .carousel-inner>.item>img {
   min-width: 100%;
   max-height: 100vh;
+}
+
+.carousel-inner>.item>img.portrait {
+  min-width: auto;
+  position: relative;
+  left: 33%;
 }
 
 
@@ -356,18 +366,22 @@ textarea#message {
     background-color: rgb(15, 14, 14);
   }
   .carousel, .item, .active {
-  height: 110% !important;
-  margin-top: -50px !important;
+    height: 110% !important;
+    margin-top: -50px !important;
+  }
+  .carousel-inner>.item>img.portrait {
+    left: 25%;
+    max-height: 75vh;
   }
   .carousel-indicators {
-      bottom: 350px !important;
+    bottom: 350px !important;
   }
   div.canvas.gallery {
-      padding: 50px 0 0 250px;
+    padding: 50px 0 0 250px;
   }
 
   #gallery-header-center-right {
-      padding-right: 85px;
+    padding-right: 85px;
   }
 }
 
