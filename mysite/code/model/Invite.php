@@ -59,13 +59,19 @@ class Invite extends DataObject
 
     public function sendInvitation()
     {
+        $toEmail = $this->Email;
+        $toName = $this->FirstName;
+        $fromName = $this->InvitedBy()->FirstName;
+        $tempHash = $this->TempHash;
         return Email::create()
             ->setFrom('no-reply@ourlocket.com')
-            ->setTo($this->Email)
-            ->setSubject(sprintf('Invitation from %s', $this->InvitedBy()->FirstName))
+            ->setTo($toEmail)
+            ->setSubject(sprintf('Invitation from %s', $fromName))
             ->setHTMLTemplate('Email\\Invitation')
             ->setData([
-                'Invite' => $this,
+                'To' => $toName,
+                'From' => $fromName,
+                'TempHash' => $tempHash,
                 'SiteURL' => Director::absoluteBaseURL(),
             ])
             ->send();

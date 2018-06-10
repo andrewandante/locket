@@ -75,11 +75,6 @@
 </head>
 <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
 
-<!-- HIDDEN PREHEADER TEXT -->
-<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    We're thrilled to have you here! Get ready to dive into your new account.
-</div>
-
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <!-- LOGO -->
     <tr>
@@ -93,7 +88,7 @@
                 <tr>
                     <td align="center" valign="top" style="padding: 40px 10px 40px 10px;">
                         <a href="$SiteURL" target="_blank">
-                            <img alt="Logo" src="/themes/photography-master/img/logo.png" width="40" height="40" style="display: block; width: 40px; max-width: 40px; min-width: 40px; font-family: 'Lato', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0">
+                            <img alt="Logo" src="{$SiteURL}themes/photography-master/img/logo.png" width="40" height="40" style="display: block; width: 40px; max-width: 40px; min-width: 40px; font-family: 'Lato', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0">
                         </a>
                     </td>
                 </tr>
@@ -139,9 +134,9 @@
                 <!-- COPY -->
                 <tr>
                     <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                        <p style="margin: 0; font-weight: bold">Hi $Invite.FirstName,</p>
+                        <p style="margin: 0; font-weight: bold">Hi $To,</p>
                         <br>
-                        <p style="margin: 0;">You've been invited to <a href="$SiteURL" target="_blank" style="color: #518abb; font-weight: 700;"><em>Locket</em></a> by $Invite.InvitedBy.FirstName. It's a secure website for photos that we'd like to share with you. First, you'll need to create an account with a new password. Just press the button below:</p>
+                        <p style="margin: 0;">You've been invited to <a href="$SiteURL" target="_blank" style="color: #518abb; font-weight: 700;"><em>Locket</em></a> by $From. It's a secure website for photos that we'd like to share with you. First, you'll need to create an account with a new password. Just press the button below:</p>
                     </td>
                 </tr>
                 <!-- BULLETPROOF BUTTON -->
@@ -152,7 +147,7 @@
                                 <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                                     <table border="0" cellspacing="0" cellpadding="0">
                                         <tr>
-                                            <td align="center" style="border-radius: 3px;" bgcolor="#518abb"><a href="{$SiteURL}user/accept/$Invite.TempHash" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid lightblue; display: inline-block;">Confirm Account</a></td>
+                                            <td align="center" style="border-radius: 3px;" bgcolor="#518abb"><a href="{$SiteURL}user/accept/$TempHash" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid lightblue; display: inline-block;">Confirm Account</a></td>
                                         </tr>
                                     </table>
                                 </td>
@@ -169,7 +164,7 @@
                 <!-- COPY -->
                 <tr>
                     <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                        <p style="margin: 0;"><a href="{$SiteURL}user/accept/$Invite.TempHash" target="_blank" style="color: #518abb;">{$SiteURL}user/accept/$Invite.TempHash</a></p>
+                        <p style="margin: 0;"><a href="{$SiteURL}user/accept/$TempHash" target="_blank" style="color: #518abb;">{$SiteURL}user/accept/$TempHash</a></p>
                     </td>
                 </tr>
                 <!-- COPY -->
@@ -222,7 +217,7 @@
                 <!-- PERMISSION REMINDER -->
                 <tr>
                     <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;" >
-                        <p style="margin: 0;">You received this email because you have just been signed up for a new account. If it looks weird, <a href="http://litmus.com" target="_blank" style="color: #518abb; font-weight: 700;">view it in your browser</a>.</p>
+                        <p style="margin: 0;">You received this email because you have just been signed up for a new account.</p>
                     </td>
                 </tr>
             </table>
