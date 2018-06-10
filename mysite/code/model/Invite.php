@@ -40,12 +40,12 @@ class Invite extends DataObject
      * Removes the hash field from the list.
      * @return FieldList
      */
-//    public function getCMSFields()
-//    {
-//        $fields = parent::getCMSFields();
-//        $fields->removeByName('TempHash');
-//        return $fields;
-//    }
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        $fields->removeByName('TempHash');
+        return $fields;
+    }
 
     public function onBeforeWrite()
     {
