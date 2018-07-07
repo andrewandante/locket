@@ -6,6 +6,7 @@ use DateTime;
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
+use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\Requirements;
 
 class GalleryController extends ProtectedPageController
@@ -44,7 +45,7 @@ class GalleryController extends ProtectedPageController
 
     public function getAllImages()
     {
-        return Image::get()->sort('Created', 'DESC');
+	return PaginatedList::create(Image::get()->sort('Created', 'DESC'), $this->request);
     }
 
     public function getYears()

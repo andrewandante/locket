@@ -12,13 +12,27 @@
             <div id="gallery-header">
                 <div id="gallery-header-center">
                     <div id="gallery-header-center-left">
-                        <div id="gallery-header-center-left-title">All Galleries</div>
-                    </div>
-                    <div id="gallery-header-center-right">
-                        <div class="gallery-header-center-right-links" id="filter-all">All</div>
-                        <% loop $Years %>
-                            <div class="gallery-header-center-right-links" id="filter-$Year">$Year</div>
+                        <div id="gallery-header-center-pagination">
+<% if $AllImages.MoreThanOnePage %>
+                        <% if $AllImages.NotFirstPage %>
+                            <a class="prev" href="$AllImages.PrevLink">Previous</a>
+                        <% end_if %>
+                        <% loop $AllImages.Pages %>
+                            <% if $CurrentBool %>
+                                $PageNum
+                            <% else %>
+                                <% if $Link %>
+                                    <a href="$Link">$PageNum</a>
+                                <% else %>
+                                    ...
+                                <% end_if %>
+                            <% end_if %>
                         <% end_loop %>
+                        <% if $AllImages.NotLastPage %>
+                            <a class="next" href="$AllImages.NextLink">Next</a>
+                        <% end_if %>
+                    <% end_if %>
+</div>
                     </div>
                 </div>
             </div>

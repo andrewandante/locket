@@ -102,6 +102,16 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+#gallery-header-center-pagination{
+	height: 35px;
+	line-height: 35px;
+	margin-top: 32px;
+	font-size: x-large;
+	float: right;
+}
+#gallery-header-center-pagination > a {
+	text-decoration: underline;
+}
 #gallery-header-center-left{
 	float: left;
 	height: 35px;
