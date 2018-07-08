@@ -3,6 +3,7 @@
 namespace AndrewAndante\Locket\Controllers;
 
 use DateTime;
+use SilverStripe\Assets\File;
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
@@ -43,9 +44,26 @@ class GalleryController extends ProtectedPageController
         Requirements::css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     }
 
+    public function getCurrentAlbum()
+    {
+        return $this->request->getVar('album');
+    }
+
+    public function getAllAlbums()
+    {
+        return File::get()->filterByCallback(function ($dir) {
+            return $dir->numChildren > 0;
+        });
+    }
+
     public function getAllImages()
     {
-	return PaginatedList::create(Image::get()->sort('Created', 'DESC'), $this->request);
+        $images = Image::get();
+        if ($album = $this->getCurrentAlbum()) {
+            $images = $images->filter(['ParentID' => $album]);
+        }
+        $images = $images->sort('DisplayDate', 'DESC');
+	    return PaginatedList::create($images, $this->request);
     }
 
     public function getYears()
