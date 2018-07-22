@@ -59,15 +59,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id="gallery-header-center-right">
-                        <div id="gallery-header-center-right-links">
-                        <ul style="clear: both; font-size: 32px; padding: 10px; margin: 10px; list-style-type: none;">
-                            <% loop $AllAlbums %>
-                            <li style="padding: 10px;"><a href="{$Top.AbsoluteURL}?album=$ID">$CleanTitle</a></li>
-                            <% end_loop %>
-                        <li style="padding: 10px;"><a href="{$Top.AbsoluteURL}?album=all">View all</a></li>
-                        </ul>
-                    </div>
+                </div>
+                <div id="gallery-content-center">
+                    <ul style="clear: both; font-size: 32px; padding: 10px; margin: 10px; list-style-type: none;">
+                        <% loop $AllAlbums %>
+                        <li style="padding: 10px;"><a href="{$Top.AbsoluteURL}?album=$ID">$CleanTitle</a></li>
+                        <% end_loop %>
+                    <li style="padding: 10px;"><a href="{$Top.AbsoluteURL}?album=all">View all</a></li>
+                    </ul>
                 </div>
             <% end_if %>
         </div>
