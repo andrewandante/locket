@@ -45,9 +45,14 @@ class GalleryController extends ProtectedPageController
         Requirements::css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     }
 
-    public function getCurrentAlbum()
+    public function getCurrentAlbumID()
     {
         return $this->request->getVar('album');
+    }
+
+    public function getCurrentAlbumTitle()
+    {
+        return Folder::get()->byID($this->request->getVar('album'))->getCleanTitle();
     }
 
     public function getAllAlbums()
@@ -58,12 +63,12 @@ class GalleryController extends ProtectedPageController
     public function getAllImages()
     {
         $images = Image::get();
-        $album = $this->getCurrentAlbum();
+        $album = $this->getCurrentAlbumID();
         if ($album && strtolower($album) !== 'all') {
             $images = $images->filter(['ParentID' => $album]);
         }
         $images = $images->sort('OriginalDate', 'DESC');
-	    return PaginatedList::create($images, $this->request);
+        return PaginatedList::create($images, $this->request);
     }
 
     public function getYears()
@@ -79,8 +84,5 @@ class GalleryController extends ProtectedPageController
         }
         return $years;
     }
-    public function getCurrentAlbumTitle()
-    {
-            return str_replace('-', ' ', Folder::get()->byID($this->request->getVar('album'))->Title);
-    }
+
 }

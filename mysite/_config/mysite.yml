@@ -14,3 +14,6 @@ SilverStripe\Assets\Image:
 SilverStripe\AssetAdmin\Forms\ImageFormFactory:
   extensions:
     - 'AndrewAndante\Locket\Model\GalleryImageFormFactoryExtension'
+SilverStripe\Assets\Folder:
+  extensions:
+    - 'AndrewAndante\Locket\Model\FolderExtension'
