@@ -52,7 +52,11 @@ class GalleryController extends ProtectedPageController
 
     public function getCurrentAlbumTitle()
     {
-        return Folder::get()->byID($this->request->getVar('album'))->getCleanTitle();
+        $folder = Folder::get()->byID($this->getCurrentAlbumID());
+        if ($folder && $folder->exists()) {
+            return $folder->getCleanTitle();
+        }
+        return 'All gallery items';
     }
 
     public function getAllAlbums()
