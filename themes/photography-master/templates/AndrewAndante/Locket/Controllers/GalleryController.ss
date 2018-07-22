@@ -5,7 +5,11 @@
 <% include NavBar %>
 
 <div class="canvas gallery"><br>
-    <h1 class="blog-post-title text-center">Gallery of Images</h1>
+    <% if $CurrentAlbum %> 
+    	<h1 class="blog-post-title text-center">$CurrentAlbumTitle</h1>
+    <% else %>
+        <h1 class="blog-post-title text-center">Choose an Album</h1>
+    <% end_if %>
     <span class="title-divider"></span>
     <div id="container" class="container">
         <div id="gallery">
@@ -54,16 +58,17 @@
                                 <h2>Choose an album:</h2>
                             </div>
                         </div>
+</div>
+                        <div id="gallery-header-center-right">
+                            <div id="gallery-header-center-right-links">
+                            <ul style="clear: both;font-size: 32px;padding: 10px;margin: 10px;list-style-type: none;">
+                                <% loop $AllAlbums %>
+                                <li style="padding: 10px;"><a href="{$Top.AbsoluteURL}?album=$ID">$Title</a></i>
+                            <% end_loop %>
+                            <li style="padding: 10px;"><a href="{$Top.AbsoluteURL}?album=all">View all</a></i>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div id="gallery-content">
-                    <div id="gallery-content-center">
-                        <% loop $AllAlbums %>
-                            <a href="{$Top.AbsoluteURL}?album=$ID">$Title</a>
-                        <% end_loop %>
-                            <a href="{$Top.AbsoluteURL}?album=all">View all</a>
-                    </div>
-                </div>
             <% end_if %>
         </div>
     </div>

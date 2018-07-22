@@ -79,5 +79,8 @@ class GalleryController extends ProtectedPageController
         }
         return $years;
     }
-
+    public function getCurrentAlbumTitle()
+    {
+            return str_replace('-', ' ', Folder::get()->byID($this->request->getVar('album'))->Title);
+    }
 }
