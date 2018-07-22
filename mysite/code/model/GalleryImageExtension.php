@@ -33,11 +33,12 @@ class GalleryImageExtension extends DataExtension
         /** @var Image $image */
         $image = $this->getOwner();
         if (!$image->OriginalDate) {
-            $filePath = implode('/', [PUBLIC_PATH, ASSETS_DIR, '.protected', $image->File->getMetaData()['path']]);
+            $filePath = implode('/', [ASSETS_PATH, '.protected', $image->File->getMetaData()['path']]);
             $exifData = exif_read_data($filePath);
             if ($exifData && isset($exifData['DateTimeOriginal'])) {
                 $dateTimeOriginal = DateTime::createFromFormat('Y:m:d H:i:s', $exifData['DateTimeOriginal']);
-                $image->OriginalDate = DBDatetime::create()->setValue($dateTimeOriginal->format(DATE_ISO8601));
+                $originalDate = DBDatetime::create()->setValue($dateTimeOriginal->format('Y-m-d H:i:s'));
+                $image->setField('OriginalDate', $originalDate->format('y-MM-dd'));
             }
         }
     }
