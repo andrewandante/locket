@@ -1,0 +1,4 @@
+SilverStripe\Core\Injector\Injector:
+  Intervention\Image\ImageManager:
+    constructor:
+      - { driver: imagick }
