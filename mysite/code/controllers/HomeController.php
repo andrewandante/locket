@@ -42,6 +42,6 @@ class HomeController extends ProtectedPageController
 
     public function getCarouselImages()
     {
-        return Image::get()->sort('Created', 'DESC')->limit('3');
+        return Image::get()->sort('OriginalDate', 'DESC')->limit('3');
     }
 }
