@@ -57,7 +57,11 @@ class GalleryController extends ProtectedPageController
 
     public function getAllAlbums()
     {
-        return Folder::get()->exclude(['Title' => 'Uploads']);
+        $folders = Folder::get()->exclude(['Title' => 'Uploads']);
+        return $folders->filterByCallback(function ($folder) {
+            /** @var Folder $folder */
+            return $folder->hasChildren();
+        });
     }
 
     public function getAllImages()
