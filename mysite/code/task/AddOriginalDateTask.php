@@ -26,11 +26,12 @@ class AddOriginalDateTask extends BuildTask
         $errorCount = 0;
         foreach (Image::get() as $image) {
             if (!$image->OriginalDate) {
-                $filePath = implode(['/', Environment::getEnv('ASSETS_PATH'), '.protected', $image->File->getMetaData()['path']]);
+                $filePath = implode('/', [ASSETS_PATH, '.protected', $image->File->getMetaData()['path']]);
                 $exifData = exif_read_data($filePath);
                 if ($exifData && isset($exifData['DateTimeOriginal'])) {
                     $dateTimeOriginal = DateTime::createFromFormat('Y:m:d H:i:s', $exifData['DateTimeOriginal']);
-                    $image->OriginalDate = DBDatetime::create()->setValue($dateTimeOriginal->format(DATE_ISO8601));
+                    $originalDate = DBDatetime::create()->setValue($dateTimeOriginal->format('Y-m-d H:i:s'));
+                    $image->setField('OriginalDate', $originalDate->format('y-MM-dd'));
                     if (!$dryRun) $image->write();
                     ++$count;
                 } else {
@@ -39,7 +40,7 @@ class AddOriginalDateTask extends BuildTask
             }
         }
 
-        echo Image::get()->count() . "total images<br>";
+        echo Image::get()->count() . " total images<br>";
         echo "$count images updated<br>";
         echo "$errorCount images failed to update<br>";
     }
