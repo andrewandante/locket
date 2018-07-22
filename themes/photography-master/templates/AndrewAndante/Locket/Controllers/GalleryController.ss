@@ -39,6 +39,11 @@
                         <% end_if %>
                         </div>
                     </div>
+                    <div id="gallery-header-center-right">
+                        <div id="gallery-header-center-right-links-current">
+                            <a href="{$BaseURL}gallery">Back to albums</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="gallery-content">
