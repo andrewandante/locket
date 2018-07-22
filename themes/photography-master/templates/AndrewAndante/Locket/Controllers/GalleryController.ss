@@ -40,9 +40,7 @@
                         </div>
                     </div>
                     <div id="gallery-header-center-right">
-                        <div id="gallery-header-center-right-links-current">
-                            <a href="{$BaseURL}gallery">Back to albums</a>
-                        </div>
+                        <a href="{$BaseURL}gallery" style="font-size: 25px;">&lt;  Back to albums</a>
                     </div>
                 </div>
             </div>
