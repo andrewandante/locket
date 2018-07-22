@@ -4,6 +4,7 @@ namespace AndrewAndante\Locket\Controllers;
 
 use DateTime;
 use SilverStripe\Assets\File;
+use SilverStripe\Assets\Folder;
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
@@ -51,18 +52,17 @@ class GalleryController extends ProtectedPageController
 
     public function getAllAlbums()
     {
-        return File::get()->filterByCallback(function ($dir) {
-            return $dir->numChildren > 0;
-        });
+        return Folder::get()->exclude(['Title' => 'Uploads']);
     }
 
     public function getAllImages()
     {
         $images = Image::get();
-        if ($album = $this->getCurrentAlbum()) {
+        $album = $this->getCurrentAlbum();
+        if ($album && strtolower($album) !== 'all') {
             $images = $images->filter(['ParentID' => $album]);
         }
-        $images = $images->sort('DisplayDate', 'DESC');
+        $images = $images->sort('OriginalDate', 'DESC');
 	    return PaginatedList::create($images, $this->request);
     }
 
